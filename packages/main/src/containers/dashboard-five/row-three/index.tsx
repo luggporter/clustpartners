@@ -3,16 +3,16 @@ import BestSellingProducts from "../../../components/dashboard-five/best-selling
 import TopSellers from "../../../components/dashboard-five/top-sellers";
 
 const RowThree = () => {
-    return (
-        <Row gutters={10}>
-            <Col lg={6} mb={10}>
-                <BestSellingProducts />
-            </Col>
-            <Col lg={6} mb={10}>
-                <TopSellers />
-            </Col>
-        </Row>
-    );
+  return (
+    <Row gutters={10}>
+      <Col lg={6} mb={10}>
+        <BestSellingProducts />
+      </Col>
+      <Col lg={6} mb={10}>
+        <TopSellers />
+      </Col>
+    </Row>
+  );
 };
 
 export default RowThree;

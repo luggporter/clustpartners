@@ -7,31 +7,31 @@ import SidebarFooter from "../../../../components/apps/chat/sidebar-footer";
 import { useAppSelector } from "../../../../redux/hooks";
 
 interface IProps {
-    layout?: 1 | 2;
+  layout?: 1 | 2;
 }
 
 const Sidebar = ({ layout }: IProps) => {
-    const { sidebar } = useAppSelector((state) => state.ui);
-    return (
-        <StyledSidebar className="sidebar" $layout={layout} $sidebar={sidebar}>
-            <StyledHeader>
-                <SidebarHeader />
-            </StyledHeader>
-            <Scrollbar bottom="60px">
-                <StyledBody>
-                    <SidebarChannels />
-                    <SidebarMessages />
-                </StyledBody>
-            </Scrollbar>
-            <StyledFooter>
-                <SidebarFooter />
-            </StyledFooter>
-        </StyledSidebar>
-    );
+  const { sidebar } = useAppSelector((state) => state.ui);
+  return (
+    <StyledSidebar className="sidebar" $layout={layout} $sidebar={sidebar}>
+      <StyledHeader>
+        <SidebarHeader />
+      </StyledHeader>
+      <Scrollbar bottom="60px">
+        <StyledBody>
+          <SidebarChannels />
+          <SidebarMessages />
+        </StyledBody>
+      </Scrollbar>
+      <StyledFooter>
+        <SidebarFooter />
+      </StyledFooter>
+    </StyledSidebar>
+  );
 };
 
 Sidebar.defaultProps = {
-    layout: 1,
+  layout: 1,
 };
 
 export default Sidebar;

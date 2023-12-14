@@ -8,21 +8,21 @@ import Main from "../../../containers/apps/mail/main";
 import SEO from "../../../components/seo";
 
 const Mail = () => {
-    return (
-        <>
-            <SEO />
-            <Content aside="minimize">
-                <ContentHeader />
-                <ContentBody container={false} p={["0px", "0px"]}>
-                    <Wrapper layout={2}>
-                        <Sidebar />
-                        <Group />
-                        <Main />
-                    </Wrapper>
-                </ContentBody>
-            </Content>
-        </>
-    );
+  return (
+    <>
+      <SEO />
+      <Content aside="minimize">
+        <ContentHeader />
+        <ContentBody container={false} p={["0px", "0px"]}>
+          <Wrapper layout={2}>
+            <Sidebar />
+            <Group />
+            <Main />
+          </Wrapper>
+        </ContentBody>
+      </Content>
+    </>
+  );
 };
 
 export default Mail;

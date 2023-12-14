@@ -10,23 +10,23 @@ import WebsiteMetrics from "../components/dashboard-two/website-metrics2";
 import WelcomeArea from "../containers/dashboard-one/welcome-area";
 
 const DashboardOne = () => {
-    return (
-        <>
-            <SEO />
-            <Content>
-                <WelcomeArea />
-                <Row gutters={10}>
-                    <RowOne />
-                    <WebsiteMetrics />
+  return (
+    <>
+      <SEO />
+      <Content>
+        <WelcomeArea />
+        <Row gutters={10}>
+          <RowOne />
+          <WebsiteMetrics />
 
-                    <RowThree />
-                    <RowThree2 />
-                    <RowFour />
-                    <RowTwo2 />
-                </Row>
-            </Content>
-        </>
-    );
+          <RowThree />
+          <RowThree2 />
+          <RowFour />
+          <RowTwo2 />
+        </Row>
+      </Content>
+    </>
+  );
 };
 
 export default DashboardOne;

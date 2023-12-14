@@ -7,93 +7,84 @@ import { toggleSidebar, toggleBody } from "../../../redux/slices/ui";
 import { StyledHeader, StyledMenuBtn, StyledSidebarBtn } from "./style";
 
 interface IProps {
-    minimizeHandler: () => void;
-    displayHandler: () => void;
-    minimize: boolean;
-    mdMinimize: boolean;
-    show: boolean;
-    sidebarLayout?: 1 | 2;
+  minimizeHandler: () => void;
+  displayHandler: () => void;
+  minimize: boolean;
+  mdMinimize: boolean;
+  show: boolean;
+  sidebarLayout?: 1 | 2;
 }
 
 const Header = ({
-    minimizeHandler,
-    displayHandler,
-    minimize,
-    mdMinimize,
-    show,
-    sidebarLayout,
+  minimizeHandler,
+  displayHandler,
+  minimize,
+  mdMinimize,
+  show,
+  sidebarLayout,
 }: IProps) => {
-    const dispatch = useAppDispatch();
-    const { sidebar, isBody } = useAppSelector((state) => state.ui);
-    const sidebarHandler = useCallback(
-        (_: any, isOpen?: "open") => {
-            dispatch(toggleSidebar({ isOpen }));
-        },
-        [dispatch]
-    );
+  const dispatch = useAppDispatch();
+  const { sidebar, isBody } = useAppSelector((state) => state.ui);
+  const sidebarHandler = useCallback(
+    (_: any, isOpen?: "open") => {
+      dispatch(toggleSidebar({ isOpen }));
+    },
+    [dispatch]
+  );
 
-    const bodyHandler = useCallback(() => {
-        dispatch(toggleBody());
-        dispatch(toggleSidebar({ isOpen: "open" }));
-    }, [dispatch]);
+  const bodyHandler = useCallback(() => {
+    dispatch(toggleBody());
+    dispatch(toggleSidebar({ isOpen: "open" }));
+  }, [dispatch]);
 
-    const menuHandler = useCallback(() => {
-        displayHandler();
-        if (show) {
-            sidebarHandler(undefined, "open");
-        }
-    }, [show, sidebarHandler, displayHandler]);
+  const menuHandler = useCallback(() => {
+    displayHandler();
+    if (show) {
+      sidebarHandler(undefined, "open");
+    }
+  }, [show, sidebarHandler, displayHandler]);
 
-    return (
-        <StyledHeader
-            $minimize={minimize}
-            $mdMinimize={mdMinimize}
-            $show={show}
-            className="aside-header"
-        >
-            <AsideLogo />
+  return (
+    <StyledHeader
+      $minimize={minimize}
+      $mdMinimize={mdMinimize}
+      $show={show}
+      className="aside-header"
+    >
+      <AsideLogo />
 
-            <StyledMenuBtn className="minimize-btn" onClick={minimizeHandler}>
-                <Menu size={18} strokeWidth="2.5px" />
-            </StyledMenuBtn>
+      <StyledMenuBtn className="minimize-btn" onClick={minimizeHandler}>
+        <Menu size={18} strokeWidth="2.5px" />
+      </StyledMenuBtn>
 
-            {sidebarLayout === 1 && (
-                <>
-                    <StyledMenuBtn
-                        className="display-btn"
-                        onClick={menuHandler}
-                    >
-                        <Menu size={18} strokeWidth="2.5px" />
-                        <X size={18} strokeWidth="2.5px" />
-                    </StyledMenuBtn>
-                    <StyledSidebarBtn
-                        onClick={!isBody ? sidebarHandler : bodyHandler}
-                        $sidebarOpen={sidebar}
-                        $bodyOpen={isBody}
-                    >
-                        <ArrowLeft size={20} strokeWidth="2.5px" />
-                    </StyledSidebarBtn>
-                </>
-            )}
-            {sidebarLayout === 2 && (
-                <>
-                    <StyledMenuBtn
-                        className="display-btn"
-                        onClick={menuHandler}
-                    >
-                        <Menu size={18} strokeWidth="2.5px" />
-                        <X size={18} strokeWidth="2.5px" />
-                    </StyledMenuBtn>
-                    <StyledSidebarBtn
-                        onClick={sidebarHandler}
-                        $sidebarOpen={!sidebar}
-                    >
-                        <ArrowLeft size={20} strokeWidth="2.5px" />
-                    </StyledSidebarBtn>
-                </>
-            )}
-        </StyledHeader>
-    );
+      {sidebarLayout === 1 && (
+        <>
+          <StyledMenuBtn className="display-btn" onClick={menuHandler}>
+            <Menu size={18} strokeWidth="2.5px" />
+            <X size={18} strokeWidth="2.5px" />
+          </StyledMenuBtn>
+          <StyledSidebarBtn
+            onClick={!isBody ? sidebarHandler : bodyHandler}
+            $sidebarOpen={sidebar}
+            $bodyOpen={isBody}
+          >
+            <ArrowLeft size={20} strokeWidth="2.5px" />
+          </StyledSidebarBtn>
+        </>
+      )}
+      {sidebarLayout === 2 && (
+        <>
+          <StyledMenuBtn className="display-btn" onClick={menuHandler}>
+            <Menu size={18} strokeWidth="2.5px" />
+            <X size={18} strokeWidth="2.5px" />
+          </StyledMenuBtn>
+          <StyledSidebarBtn onClick={sidebarHandler} $sidebarOpen={!sidebar}>
+            <ArrowLeft size={20} strokeWidth="2.5px" />
+          </StyledSidebarBtn>
+        </>
+      )}
+    </StyledHeader>
+  );
 };
 
 export default Header;

@@ -4,17 +4,17 @@ import LoggedinUser from "./loggedin-user";
 import { StyledUser, StyledAvatarWrap } from "./style";
 
 const AsideUser = () => {
-    return (
-        <StyledUser className="aside-user">
-            <StyledAvatarWrap>
-                <Avatar size="md">
-                    <AvatarInitial>T</AvatarInitial>
-                </Avatar>
-                <Alerts />
-            </StyledAvatarWrap>
-            <LoggedinUser />
-        </StyledUser>
-    );
+  return (
+    <StyledUser className="aside-user">
+      <StyledAvatarWrap>
+        <Avatar size="md">
+          <AvatarInitial>T</AvatarInitial>
+        </Avatar>
+        <Alerts />
+      </StyledAvatarWrap>
+      <LoggedinUser />
+    </StyledUser>
+  );
 };
 
 export default AsideUser;

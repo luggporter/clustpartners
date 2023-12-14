@@ -13,34 +13,34 @@ import RightRowFour from "../../containers/dashboard-four/right-row-four";
 import SEO from "../../components/seo";
 
 const DashboardFour = () => {
-    return (
-        <>
-            <SEO />
-            <Content>
-                <ContentHeader />
-                <ContentBody>
-                    <WelcomeArea />
-                    <Row gutters={10}>
-                        <Col lg={8}>
-                            <Row gutters={10}>
-                                <LeftRowOne />
-                                <LeftRowTwo />
-                                <LeftRowThree />
-                            </Row>
-                        </Col>
-                        <Col lg={4} mt={["10px", null, null, 0]}>
-                            <Row gutters={10}>
-                                <RightRowOne />
-                                <RightRowTwo />
-                                <RightRowhree />
-                                <RightRowFour />
-                            </Row>
-                        </Col>
-                    </Row>
-                </ContentBody>
-            </Content>
-        </>
-    );
+  return (
+    <>
+      <SEO />
+      <Content>
+        <ContentHeader />
+        <ContentBody>
+          <WelcomeArea />
+          <Row gutters={10}>
+            <Col lg={8}>
+              <Row gutters={10}>
+                <LeftRowOne />
+                <LeftRowTwo />
+                <LeftRowThree />
+              </Row>
+            </Col>
+            <Col lg={4} mt={["10px", null, null, 0]}>
+              <Row gutters={10}>
+                <RightRowOne />
+                <RightRowTwo />
+                <RightRowhree />
+                <RightRowFour />
+              </Row>
+            </Col>
+          </Row>
+        </ContentBody>
+      </Content>
+    </>
+  );
 };
 
 export default DashboardFour;

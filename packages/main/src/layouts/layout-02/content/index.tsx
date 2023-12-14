@@ -3,32 +3,32 @@ import cn from "clsx";
 import { StyledContent } from "./style";
 
 interface IProps extends SpaceProps {
-    children: React.ReactNode;
-    className?: string;
-    fullHeight?: boolean;
-    align?: "top" | "center" | "bottom";
-    aside?: "minimize";
+  children: React.ReactNode;
+  className?: string;
+  fullHeight?: boolean;
+  align?: "top" | "center" | "bottom";
+  aside?: "minimize";
 }
 
 const Content = ({
-    children,
-    className,
-    fullHeight,
-    align,
-    aside,
-    ...restProps
+  children,
+  className,
+  fullHeight,
+  align,
+  aside,
+  ...restProps
 }: IProps) => {
-    return (
-        <StyledContent
-            $fullHeight={fullHeight}
-            $align={align}
-            $aside={aside}
-            className={cn(className, "content")}
-            {...restProps}
-        >
-            {children}
-        </StyledContent>
-    );
+  return (
+    <StyledContent
+      $fullHeight={fullHeight}
+      $align={align}
+      $aside={aside}
+      className={cn(className, "content")}
+      {...restProps}
+    >
+      {children}
+    </StyledContent>
+  );
 };
 
 export default Content;

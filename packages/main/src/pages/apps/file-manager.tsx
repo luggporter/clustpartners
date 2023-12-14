@@ -4,15 +4,15 @@ import MainContent from "../../containers/apps/file-manager/main";
 import SEO from "../../components/seo";
 
 const FileManager = () => {
-    return (
-        <>
-            <SEO />
-            <Wrapper>
-                <Sidebar />
-                <MainContent />
-            </Wrapper>
-        </>
-    );
+  return (
+    <>
+      <SEO />
+      <Wrapper>
+        <Sidebar />
+        <MainContent />
+      </Wrapper>
+    </>
+  );
 };
 
 export default FileManager;

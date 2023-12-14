@@ -8,20 +8,20 @@ import RowTwo from "../../containers/help-center/row-two";
 import SEO from "../../components/seo";
 
 const HelpCenter = () => {
-    return (
-        <>
-            <SEO />
-            <Content>
-                <ContentHeader />
-                <ContentBody>
-                    <PageHeader pb="40px" />
-                    <RowOne />
-                    <HRLine mt="60px" mb="30px" />
-                    <RowTwo />
-                </ContentBody>
-            </Content>
-        </>
-    );
+  return (
+    <>
+      <SEO />
+      <Content>
+        <ContentHeader />
+        <ContentBody>
+          <PageHeader pb="40px" />
+          <RowOne />
+          <HRLine mt="60px" mb="30px" />
+          <RowTwo />
+        </ContentBody>
+      </Content>
+    </>
+  );
 };
 
 export default HelpCenter;

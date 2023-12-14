@@ -11,61 +11,58 @@ import image9 from "@doar/shared/images/img20.jpg";
 import WidgetTitle from "../widget-title";
 
 const Gallery = () => {
-    return (
-        <>
-            <WidgetTitle
-                title="Photos"
-                link={{ text: "Add Photo", path: "#!" }}
-            />
-            <Row gutters={2}>
-                <Col col={4}>
-                    <Anchor path="#!" display="block" height="60px">
-                        <Image src={image1} alt="gallery" fit="cover" />
-                    </Anchor>
-                </Col>
-                <Col col={4}>
-                    <Anchor path="#!" display="block" height="60px">
-                        <Image src={image2} alt="gallery" fit="cover" />
-                    </Anchor>
-                </Col>
-                <Col col={4}>
-                    <Anchor path="#!" display="block" height="60px">
-                        <Image src={image3} alt="gallery" fit="cover" />
-                    </Anchor>
-                </Col>
-                <Col col={4} mt="2px">
-                    <Anchor path="#!" display="block" height="60px">
-                        <Image src={image4} alt="gallery" fit="cover" />
-                    </Anchor>
-                </Col>
-                <Col col={4} mt="2px">
-                    <Anchor path="#!" display="block" height="60px">
-                        <Image src={image5} alt="gallery" fit="cover" />
-                    </Anchor>
-                </Col>
-                <Col col={4} mt="2px">
-                    <Anchor path="#!" display="block" height="60px">
-                        <Image src={image6} alt="gallery" fit="cover" />
-                    </Anchor>
-                </Col>
-                <Col col={4} mt="2px">
-                    <Anchor path="#!" display="block" height="60px">
-                        <Image src={image7} alt="gallery" fit="cover" />
-                    </Anchor>
-                </Col>
-                <Col col={4} mt="2px">
-                    <Anchor path="#!" display="block" height="60px">
-                        <Image src={image8} alt="gallery" fit="cover" />
-                    </Anchor>
-                </Col>
-                <Col col={4} mt="2px">
-                    <Anchor path="#!" display="block" height="60px">
-                        <Image src={image9} alt="gallery" fit="cover" />
-                    </Anchor>
-                </Col>
-            </Row>
-        </>
-    );
+  return (
+    <>
+      <WidgetTitle title="Photos" link={{ text: "Add Photo", path: "#!" }} />
+      <Row gutters={2}>
+        <Col col={4}>
+          <Anchor path="#!" display="block" height="60px">
+            <Image src={image1} alt="gallery" fit="cover" />
+          </Anchor>
+        </Col>
+        <Col col={4}>
+          <Anchor path="#!" display="block" height="60px">
+            <Image src={image2} alt="gallery" fit="cover" />
+          </Anchor>
+        </Col>
+        <Col col={4}>
+          <Anchor path="#!" display="block" height="60px">
+            <Image src={image3} alt="gallery" fit="cover" />
+          </Anchor>
+        </Col>
+        <Col col={4} mt="2px">
+          <Anchor path="#!" display="block" height="60px">
+            <Image src={image4} alt="gallery" fit="cover" />
+          </Anchor>
+        </Col>
+        <Col col={4} mt="2px">
+          <Anchor path="#!" display="block" height="60px">
+            <Image src={image5} alt="gallery" fit="cover" />
+          </Anchor>
+        </Col>
+        <Col col={4} mt="2px">
+          <Anchor path="#!" display="block" height="60px">
+            <Image src={image6} alt="gallery" fit="cover" />
+          </Anchor>
+        </Col>
+        <Col col={4} mt="2px">
+          <Anchor path="#!" display="block" height="60px">
+            <Image src={image7} alt="gallery" fit="cover" />
+          </Anchor>
+        </Col>
+        <Col col={4} mt="2px">
+          <Anchor path="#!" display="block" height="60px">
+            <Image src={image8} alt="gallery" fit="cover" />
+          </Anchor>
+        </Col>
+        <Col col={4} mt="2px">
+          <Anchor path="#!" display="block" height="60px">
+            <Image src={image9} alt="gallery" fit="cover" />
+          </Anchor>
+        </Col>
+      </Row>
+    </>
+  );
 };
 
 export default Gallery;

@@ -5,16 +5,16 @@ import Main from "../../containers/apps/mail/main";
 import SEO from "../../components/seo";
 
 const Mail = () => {
-    return (
-        <>
-            <SEO />
-            <Wrapper>
-                <Sidebar />
-                <Group />
-                <Main />
-            </Wrapper>
-        </>
-    );
+  return (
+    <>
+      <SEO />
+      <Wrapper>
+        <Sidebar />
+        <Group />
+        <Main />
+      </Wrapper>
+    </>
+  );
 };
 
 export default Mail;

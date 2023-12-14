@@ -6,18 +6,18 @@ import TagsNav from "../../../../components/apps/mail/tags-nav";
 import { StyledSidebar, StyledBody } from "./style";
 
 const Sidebar = () => {
-    return (
-        <StyledSidebar className="sidebar">
-            <Scrollbar top="0px">
-                <StyledBody>
-                    <ComposeBtn />
-                    <MainNav />
-                    <LabelNav />
-                    <TagsNav />
-                </StyledBody>
-            </Scrollbar>
-        </StyledSidebar>
-    );
+  return (
+    <StyledSidebar className="sidebar">
+      <Scrollbar top="0px">
+        <StyledBody>
+          <ComposeBtn />
+          <MainNav />
+          <LabelNav />
+          <TagsNav />
+        </StyledBody>
+      </Scrollbar>
+    </StyledSidebar>
+  );
 };
 
 export default Sidebar;

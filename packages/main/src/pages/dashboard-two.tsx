@@ -9,21 +9,21 @@ import RowFive from "../containers/dashboard-two/row-five";
 import SEO from "../components/seo";
 
 const DashboardTwo = () => {
-    return (
-        <>
-            <SEO />
-            <Content>
-                <WelcomeArea />
-                <Row gutters={10}>
-                    <RowOne />
-                    <RowTwo />
-                    <RowThree />
-                    <RowFour />
-                    <RowFive />
-                </Row>
-            </Content>
-        </>
-    );
+  return (
+    <>
+      <SEO />
+      <Content>
+        <WelcomeArea />
+        <Row gutters={10}>
+          <RowOne />
+          <RowTwo />
+          <RowThree />
+          <RowFour />
+          <RowFive />
+        </Row>
+      </Content>
+    </>
+  );
 };
 
 export default DashboardTwo;

@@ -4,15 +4,15 @@ import Main from "../../containers/apps/contacts/main";
 import SEO from "../../components/seo";
 
 const Contacts = () => {
-    return (
-        <>
-            <SEO />
-            <Wrapper>
-                <Sidebar />
-                <Main />
-            </Wrapper>
-        </>
-    );
+  return (
+    <>
+      <SEO />
+      <Wrapper>
+        <Sidebar />
+        <Main />
+      </Wrapper>
+    </>
+  );
 };
 
 export default Contacts;

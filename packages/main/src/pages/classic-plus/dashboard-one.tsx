@@ -10,23 +10,23 @@ import RowFour from "../../containers/dashboard-one/row-four";
 import SEO from "../../components/seo";
 
 const DashboardOne = () => {
-    return (
-        <>
-            <SEO />
-            <Content>
-                <ContentHeader />
-                <ContentBody>
-                    <WelcomeArea />
-                    <Row gutters={10}>
-                        <RowOne />
-                        <RowTwo />
-                        <RowThree />
-                        <RowFour />
-                    </Row>
-                </ContentBody>
-            </Content>
-        </>
-    );
+  return (
+    <>
+      <SEO />
+      <Content>
+        <ContentHeader />
+        <ContentBody>
+          <WelcomeArea />
+          <Row gutters={10}>
+            <RowOne />
+            <RowTwo />
+            <RowThree />
+            <RowFour />
+          </Row>
+        </ContentBody>
+      </Content>
+    </>
+  );
 };
 
 export default DashboardOne;

@@ -5,17 +5,17 @@ import ErrorContainer from "../../containers/error-505";
 import SEO from "../../components/seo";
 
 const Error503 = () => {
-    return (
-        <>
-            <SEO />
-            <Content fullHeight align="center">
-                <ContentHeader />
-                <ContentBody>
-                    <ErrorContainer />
-                </ContentBody>
-            </Content>
-        </>
-    );
+  return (
+    <>
+      <SEO />
+      <Content fullHeight align="center">
+        <ContentHeader />
+        <ContentBody>
+          <ErrorContainer />
+        </ContentBody>
+      </Content>
+    </>
+  );
 };
 
 export default Error503;

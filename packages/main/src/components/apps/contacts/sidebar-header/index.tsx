@@ -5,16 +5,16 @@ import SearchForm from "../search-form";
 import { StyledHeader } from "./style";
 
 const SidebarHeader = () => {
-    return (
-        <StyledHeader>
-            <Search className="search" />
-            <SearchForm />
-            <Button size="xs" iconButton data-tip="Add New Contact">
-                <UserPlus />
-            </Button>
-            <ReactTooltip place="bottom" effect="solid" />
-        </StyledHeader>
-    );
+  return (
+    <StyledHeader>
+      <Search className="search" />
+      <SearchForm />
+      <Button size="xs" iconButton data-tip="Add New Contact">
+        <UserPlus />
+      </Button>
+      <ReactTooltip place="bottom" effect="solid" />
+    </StyledHeader>
+  );
 };
 
 export default SidebarHeader;

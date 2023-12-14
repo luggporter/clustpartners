@@ -12,68 +12,66 @@ import DirectTitle from "../../../../components/apps/chat/direct-title";
 import { useAppSelector, useAppDispatch } from "../../../../redux/hooks";
 import { toggleSidebar } from "../../../../redux/slices/chat-ui";
 import {
-    StyledMain,
-    StyledHeader,
-    StyledHeaderRight,
-    StyledBody,
-    StyledBodyInner,
-    StyledFooter,
-    StyledSidebar,
+  StyledMain,
+  StyledHeader,
+  StyledHeaderRight,
+  StyledBody,
+  StyledBodyInner,
+  StyledFooter,
+  StyledSidebar,
 } from "./style";
 
 interface IProps {
-    layout?: 1 | 2;
+  layout?: 1 | 2;
 }
 
 const Main = ({ layout }: IProps) => {
-    const dispatch = useAppDispatch();
-    const { channel, chatType, rightSidebar } = useAppSelector(
-        (state) => state.chatUI
-    );
-    const { sidebar } = useAppSelector((state) => state.ui);
+  const dispatch = useAppDispatch();
+  const { channel, chatType, rightSidebar } = useAppSelector(
+    (state) => state.chatUI
+  );
+  const { sidebar } = useAppSelector((state) => state.ui);
 
-    useEffect(() => {
-        if (window.matchMedia("(max-width: 991px)").matches) {
-            dispatch(toggleSidebar());
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+  useEffect(() => {
+    if (window.matchMedia("(max-width: 991px)").matches) {
+      dispatch(toggleSidebar());
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-    return (
-        <StyledMain className="content" $layout={layout} $sidebar={sidebar}>
-            <StyledHeader>
-                {chatType === "channel" && (
-                    <Heading mb="0px">#{channel}</Heading>
-                )}
-                {chatType === "direct" && <DirectTitle />}
-                <StyledHeaderRight>
-                    {chatType === "channel" && <ChannelNav />}
-                    {chatType === "direct" && <DirectNav />}
-                    <SearchForm />
-                    <SettingsNav />
-                </StyledHeaderRight>
-            </StyledHeader>
-            <StyledBody $showSidebar={rightSidebar}>
-                <ScrollBar>
-                    <StyledBodyInner>
-                        <ChatGroup />
-                    </StyledBodyInner>
-                </ScrollBar>
-            </StyledBody>
-            <StyledFooter>
-                <ChatForm />
-            </StyledFooter>
-            <StyledSidebar $showSidebar={rightSidebar}>
-                <ScrollBar>
-                    <MemberList />
-                </ScrollBar>
-            </StyledSidebar>
-        </StyledMain>
-    );
+  return (
+    <StyledMain className="content" $layout={layout} $sidebar={sidebar}>
+      <StyledHeader>
+        {chatType === "channel" && <Heading mb="0px">#{channel}</Heading>}
+        {chatType === "direct" && <DirectTitle />}
+        <StyledHeaderRight>
+          {chatType === "channel" && <ChannelNav />}
+          {chatType === "direct" && <DirectNav />}
+          <SearchForm />
+          <SettingsNav />
+        </StyledHeaderRight>
+      </StyledHeader>
+      <StyledBody $showSidebar={rightSidebar}>
+        <ScrollBar>
+          <StyledBodyInner>
+            <ChatGroup />
+          </StyledBodyInner>
+        </ScrollBar>
+      </StyledBody>
+      <StyledFooter>
+        <ChatForm />
+      </StyledFooter>
+      <StyledSidebar $showSidebar={rightSidebar}>
+        <ScrollBar>
+          <MemberList />
+        </ScrollBar>
+      </StyledSidebar>
+    </StyledMain>
+  );
 };
 
 Main.defaultProps = {
-    layout: 1,
+  layout: 1,
 };
 
 export default Main;

@@ -5,17 +5,17 @@ import ErrorContainer from "../../containers/error-404";
 import SEO from "../../components/seo";
 
 const ErrorNotFound = () => {
-    return (
-        <>
-            <SEO />
-            <Content fullHeight align="center">
-                <ContentHeader />
-                <ContentBody>
-                    <ErrorContainer />
-                </ContentBody>
-            </Content>
-        </>
-    );
+  return (
+    <>
+      <SEO />
+      <Content fullHeight align="center">
+        <ContentHeader />
+        <ContentBody>
+          <ErrorContainer />
+        </ContentBody>
+      </Content>
+    </>
+  );
 };
 
 export default ErrorNotFound;

@@ -7,20 +7,20 @@ import MainContent from "../../../containers/apps/file-manager/main";
 import SEO from "../../../components/seo";
 
 const FileManager = () => {
-    return (
-        <>
-            <SEO />
-            <Content aside="minimize">
-                <ContentHeader />
-                <ContentBody container={false} p={["0px", "0px"]}>
-                    <Wrapper layout={2}>
-                        <Sidebar />
-                        <MainContent />
-                    </Wrapper>
-                </ContentBody>
-            </Content>
-        </>
-    );
+  return (
+    <>
+      <SEO />
+      <Content aside="minimize">
+        <ContentHeader />
+        <ContentBody container={false} p={["0px", "0px"]}>
+          <Wrapper layout={2}>
+            <Sidebar />
+            <MainContent />
+          </Wrapper>
+        </ContentBody>
+      </Content>
+    </>
+  );
 };
 
 export default FileManager;
