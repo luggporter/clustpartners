@@ -10,7 +10,7 @@ import {
     StyledTable,
 } from "./style";
 
-import SessoionsChannel2 from "../../../components/dashboard-two/sessions-channel";
+import SessoionsChannel2 from "../../../components/dashboard-two/sessions-channel3";
 import { flatDeep } from "@doar/shared/methods";
 import { salesRevenues } from "@doar/shared/data/dashboard-one";
 import usajson from "@doar/shared/data/maps/usa.json";
