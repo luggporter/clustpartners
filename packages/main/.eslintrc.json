@@ -7,8 +7,8 @@
         "@typescript-eslint/no-misused-promises": [
             "error",
             {
-              "checksConditionals": false,
-              "checksVoidReturn": false
+                "checksConditionals": false,
+                "checksVoidReturn": false
             }
         ]
     }
