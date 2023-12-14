@@ -1,8 +1,10 @@
 import {
+
   Outlet,
   Route,
   BrowserRouter as Router,
   Routes,
+
 } from "react-router-dom";
 import { Suspense, lazy } from "react";
 
@@ -44,6 +46,7 @@ const Mail = lazy(() => import("./pages/apps/mail"));
 // Classic Plus Pages
 
 const ClassicPlusDashboardOne = lazy(
+
   () => import("./pages/classic-plus/dashboard-one")
 );
 const ClassicPlusDashboardTwo = lazy(
@@ -57,39 +60,43 @@ const ClassicPlusDashboardFour = lazy(
 );
 const ClassicPlusDashboardFive = lazy(
   () => import("./pages/classic-plus/dashboard-five")
+
 );
 const ClassicPlusSignIn = lazy(() => import("./pages/classic-plus/signin"));
 const ClassicPlusSignUp = lazy(() => import("./pages/classic-plus/signup"));
 const ClassicPlusVerifyAccount = lazy(
-  () => import("./pages/classic-plus/verify-account")
+
+    () => import("./pages/classic-plus/verify-account")
 );
 const ClassicPlusForgotPassword = lazy(
-  () => import("./pages/classic-plus/forgot-password")
+    () => import("./pages/classic-plus/forgot-password")
 );
 const ClassicPlusErrorNotFound = lazy(
-  () => import("./pages/classic-plus/error-404")
+    () => import("./pages/classic-plus/error-404")
 );
 const ClassicPlusError500 = lazy(
-  () => import("./pages/classic-plus/error-500")
+    () => import("./pages/classic-plus/error-500")
 );
 const ClassicPlusError503 = lazy(
-  () => import("./pages/classic-plus/error-503")
+    () => import("./pages/classic-plus/error-503")
 );
 const ClassicPlusError505 = lazy(
-  () => import("./pages/classic-plus/error-505")
+    () => import("./pages/classic-plus/error-505")
 );
 
 const ClassicPlusProfileView = lazy(
-  () => import("./pages/classic-plus/profile-view")
+    () => import("./pages/classic-plus/profile-view")
 );
 const ClassicPlusConnections = lazy(
-  () => import("./pages/classic-plus/connections")
+    () => import("./pages/classic-plus/connections")
+
 );
 const ClassicPlusGroups = lazy(() => import("./pages/classic-plus/groups"));
 const ClassicPlusEvents = lazy(() => import("./pages/classic-plus/events"));
 const ClassicPlusTimeline = lazy(() => import("./pages/classic-plus/timeline"));
 const ClassicPlusPricing = lazy(() => import("./pages/classic-plus/pricing"));
 const ClassicPlusHelpCenter = lazy(
+
   () => import("./pages/classic-plus/help-center")
 );
 const ClassicPlusInvoice = lazy(() => import("./pages/classic-plus/invoice"));
@@ -102,10 +109,12 @@ const ClassicPlusContacts = lazy(
 );
 const ClassicPlusFileManager = lazy(
   () => import("./pages/classic-plus/apps/file-manager")
+
 );
 const ClassicPlusMail = lazy(() => import("./pages/classic-plus/apps/mail"));
 
 const App = () => {
+
   return (
     <>
       <Router>
@@ -341,6 +350,7 @@ const App = () => {
       </Router>
     </>
   );
+
 };
 
 export default App;
