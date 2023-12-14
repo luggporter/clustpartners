@@ -5,17 +5,17 @@ import AuthContainer from "../../containers/signup";
 import SEO from "../../components/seo";
 
 const SignUp = () => {
-    return (
-        <>
-            <SEO />
-            <Content fullHeight>
-                <ContentHeader />
-                <ContentBody>
-                    <AuthContainer />
-                </ContentBody>
-            </Content>
-        </>
-    );
+  return (
+    <>
+      <SEO />
+      <Content fullHeight>
+        <ContentHeader />
+        <ContentBody>
+          <AuthContainer />
+        </ContentBody>
+      </Content>
+    </>
+  );
 };
 
 export default SignUp;

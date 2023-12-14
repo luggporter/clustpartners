@@ -8,21 +8,21 @@ packages.push(path.join(__dirname, "../components"));
 packages.push(path.join(__dirname, "../shared"));
 
 module.exports = {
-    webpack: {
-        configure: (webpackConfig, _arg) => {
-            const { isFound, match } = getLoader(
-                webpackConfig,
-                loaderByName("babel-loader")
-            );
-            if (isFound) {
-                const include = Array.isArray(match.loader.include)
-                    ? match.loader.include
-                    : [match.loader.include];
+  webpack: {
+    configure: (webpackConfig, _arg) => {
+      const { isFound, match } = getLoader(
+        webpackConfig,
+        loaderByName("babel-loader")
+      );
+      if (isFound) {
+        const include = Array.isArray(match.loader.include)
+          ? match.loader.include
+          : [match.loader.include];
 
-                match.loader.include = include.concat(packages);
-            }
+        match.loader.include = include.concat(packages);
+      }
 
-            return webpackConfig;
-        },
+      return webpackConfig;
     },
+  },
 };

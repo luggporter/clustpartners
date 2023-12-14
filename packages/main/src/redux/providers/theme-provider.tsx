@@ -7,20 +7,20 @@ import { TTheme } from "@doar/shared/types";
 import { toggleTheme } from "../slices/theme";
 
 const Theme = ({ children }: { children: React.ReactNode }) => {
-    const dispatch = useAppDispatch();
-    const { theme } = useAppSelector((state) => state.theme);
+  const dispatch = useAppDispatch();
+  const { theme } = useAppSelector((state) => state.theme);
 
-    const themeHandler = (curTheme: TTheme) => {
-        dispatch(toggleTheme({ theme: curTheme }));
-    };
+  const themeHandler = (curTheme: TTheme) => {
+    dispatch(toggleTheme({ theme: curTheme }));
+  };
 
-    return (
-        <ThemeProvider theme={themes[theme]}>
-            <GlobalStyle />
-            {/* <SettingsCard themeHandler={themeHandler} curTheme={theme} /> */}
-            {children}
-        </ThemeProvider>
-    );
+  return (
+    <ThemeProvider theme={themes[theme]}>
+      <GlobalStyle />
+      {/* <SettingsCard themeHandler={themeHandler} curTheme={theme} /> */}
+      {children}
+    </ThemeProvider>
+  );
 };
 
 export default Theme;

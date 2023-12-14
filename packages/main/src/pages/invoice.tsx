@@ -6,19 +6,19 @@ import RowThree from "../containers/invoice/row-three";
 import SEO from "../components/seo";
 
 const HelpCenter = () => {
-    return (
-        <>
-            <SEO />
-            <Content borderBottomWidth="1px">
-                <PageHeader />
-            </Content>
-            <Content mt={[null, null, null, "0px"]}>
-                <RowOne />
-                <RowTwo />
-                <RowThree />
-            </Content>
-        </>
-    );
+  return (
+    <>
+      <SEO />
+      <Content borderBottomWidth="1px">
+        <PageHeader />
+      </Content>
+      <Content mt={[null, null, null, "0px"]}>
+        <RowOne />
+        <RowTwo />
+        <RowThree />
+      </Content>
+    </>
+  );
 };
 
 export default HelpCenter;

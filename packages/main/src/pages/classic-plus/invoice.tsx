@@ -8,20 +8,20 @@ import RowThree from "../../containers/invoice/row-three";
 import SEO from "../../components/seo";
 
 const HelpCenter = () => {
-    return (
-        <>
-            <SEO />
-            <Content>
-                <ContentHeader />
-                <ContentBody>
-                    <PageHeader pb="40px" />
-                    <RowOne />
-                    <RowTwo />
-                    <RowThree />
-                </ContentBody>
-            </Content>
-        </>
-    );
+  return (
+    <>
+      <SEO />
+      <Content>
+        <ContentHeader />
+        <ContentBody>
+          <PageHeader pb="40px" />
+          <RowOne />
+          <RowTwo />
+          <RowThree />
+        </ContentBody>
+      </Content>
+    </>
+  );
 };
 
 export default HelpCenter;

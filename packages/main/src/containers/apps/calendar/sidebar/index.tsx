@@ -13,44 +13,44 @@ import CreateEvent from "../../../../components/apps/calendar/create-event";
 import { useAppSelector } from "../../../../redux/hooks";
 
 const Sidebar = () => {
-    const { sidebar } = useAppSelector((state) => state.ui);
-    const [showModal, setShowModal] = useState(false);
-    const handleModal = () => {
-        setShowModal((prev) => !prev);
-    };
-    return (
-        <>
-            <StyledWrap $show={sidebar}>
-                <StyledHeader>
-                    <Search className="search" />
-                    <SearchForm />
-                    <Button
-                        size="sm"
-                        iconButton
-                        onClick={handleModal}
-                        data-tip="Create new event"
-                    >
-                        <div>
-                            <Plus className="plus" />
-                        </div>
-                    </Button>
-                    <ReactTooltip place="bottom" effect="solid" />
-                </StyledHeader>
-                <PerfectScrollbar>
-                    <StyledBody>
-                        <InlineCalendar />
-                        <CalendarEvents />
-                        <UpcomingEvents />
-                    </StyledBody>
-                </PerfectScrollbar>
-            </StyledWrap>
-            <CreateEvent
-                show={showModal}
-                onClose={handleModal}
-                currentDate={{ start: new Date(), end: new Date() }}
-            />
-        </>
-    );
+  const { sidebar } = useAppSelector((state) => state.ui);
+  const [showModal, setShowModal] = useState(false);
+  const handleModal = () => {
+    setShowModal((prev) => !prev);
+  };
+  return (
+    <>
+      <StyledWrap $show={sidebar}>
+        <StyledHeader>
+          <Search className="search" />
+          <SearchForm />
+          <Button
+            size="sm"
+            iconButton
+            onClick={handleModal}
+            data-tip="Create new event"
+          >
+            <div>
+              <Plus className="plus" />
+            </div>
+          </Button>
+          <ReactTooltip place="bottom" effect="solid" />
+        </StyledHeader>
+        <PerfectScrollbar>
+          <StyledBody>
+            <InlineCalendar />
+            <CalendarEvents />
+            <UpcomingEvents />
+          </StyledBody>
+        </PerfectScrollbar>
+      </StyledWrap>
+      <CreateEvent
+        show={showModal}
+        onClose={handleModal}
+        currentDate={{ start: new Date(), end: new Date() }}
+      />
+    </>
+  );
 };
 
 export default Sidebar;

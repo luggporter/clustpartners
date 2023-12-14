@@ -8,21 +8,21 @@ import Main from "../../../containers/apps/chat/main";
 import SEO from "../../../components/seo";
 
 const Chat = () => {
-    return (
-        <>
-            <SEO />
-            <Content>
-                <ContentHeader />
-                <ContentBody container={false} p={["0px", "0px"]}>
-                    <Wrapper layout={2}>
-                        <NavLeft layout={2} />
-                        <Sidebar layout={2} />
-                        <Main layout={2} />
-                    </Wrapper>
-                </ContentBody>
-            </Content>
-        </>
-    );
+  return (
+    <>
+      <SEO />
+      <Content>
+        <ContentHeader />
+        <ContentBody container={false} p={["0px", "0px"]}>
+          <Wrapper layout={2}>
+            <NavLeft layout={2} />
+            <Sidebar layout={2} />
+            <Main layout={2} />
+          </Wrapper>
+        </ContentBody>
+      </Content>
+    </>
+  );
 };
 
 export default Chat;

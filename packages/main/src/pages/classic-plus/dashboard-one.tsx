@@ -10,23 +10,23 @@ import SEO from "../../components/seo";
 import WelcomeArea from "../../containers/dashboard-one/welcome-area";
 
 const DashboardOne = () => {
-    return (
-        <>
-            <SEO />
-            <Content>
-                <ContentHeader />
-                <ContentBody>
-                    <WelcomeArea />
-                    <Row gutters={10}>
-                        <RowOne />
-                        <RowTwo />
-                        <RowThree />
-                        <RowFour />
-                    </Row>
-                </ContentBody>
-            </Content>
-        </>
-    );
+  return (
+    <>
+      <SEO />
+      <Content>
+        <ContentHeader />
+        <ContentBody>
+          <WelcomeArea />
+          <Row gutters={10}>
+            <RowOne />
+            <RowTwo />
+            <RowThree />
+            <RowFour />
+          </Row>
+        </ContentBody>
+      </Content>
+    </>
+  );
 };
 
 export default DashboardOne;

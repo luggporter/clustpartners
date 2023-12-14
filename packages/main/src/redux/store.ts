@@ -1,14 +1,14 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 
 import {
-    persistStore,
-    persistReducer,
-    FLUSH,
-    REHYDRATE,
-    PAUSE,
-    PERSIST,
-    PURGE,
-    REGISTER,
+  persistStore,
+  persistReducer,
+  FLUSH,
+  REHYDRATE,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER,
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import eventReducer from "./slices/event";
@@ -17,35 +17,28 @@ import themeReducer from "./slices/theme";
 import chatUISlice from "./slices/chat-ui";
 
 const persistConfig = {
-    key: "doar",
-    version: 1.1,
-    blacklist: ["ui"],
-    storage,
+  key: "doar",
+  version: 1.1,
+  blacklist: ["ui"],
+  storage,
 };
 
 export const rootReducer = combineReducers({
-    events: eventReducer,
-    ui: uiReducer,
-    chatUI: chatUISlice,
-    theme: themeReducer,
+  events: eventReducer,
+  ui: uiReducer,
+  chatUI: chatUISlice,
+  theme: themeReducer,
 });
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
-    reducer: persistedReducer,
-    middleware: (getDefaultMiddleware) =>
-        getDefaultMiddleware({
-            serializableCheck: {
-                ignoredActions: [
-                    FLUSH,
-                    REHYDRATE,
-                    PAUSE,
-                    PERSIST,
-                    PURGE,
-                    REGISTER,
-                ],
-            },
-        }),
+  reducer: persistedReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
 });
 
 export const persistor = persistStore(store);

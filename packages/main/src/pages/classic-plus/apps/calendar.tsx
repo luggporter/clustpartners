@@ -7,20 +7,20 @@ import Main from "../../../containers/apps/calendar/main";
 import SEO from "../../../components/seo";
 
 const Calendar = () => {
-    return (
-        <>
-            <SEO />
-            <Content aside="minimize">
-                <ContentHeader />
-                <ContentBody container={false} p={["0px", "0px"]}>
-                    <Wrapper layout={2}>
-                        <Sidebar />
-                        <Main />
-                    </Wrapper>
-                </ContentBody>
-            </Content>
-        </>
-    );
+  return (
+    <>
+      <SEO />
+      <Content aside="minimize">
+        <ContentHeader />
+        <ContentBody container={false} p={["0px", "0px"]}>
+          <Wrapper layout={2}>
+            <Sidebar />
+            <Main />
+          </Wrapper>
+        </ContentBody>
+      </Content>
+    </>
+  );
 };
 
 export default Calendar;

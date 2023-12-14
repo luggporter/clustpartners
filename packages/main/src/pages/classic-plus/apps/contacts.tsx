@@ -7,20 +7,20 @@ import Main from "../../../containers/apps/contacts/main";
 import SEO from "../../../components/seo";
 
 const Contacts = () => {
-    return (
-        <>
-            <SEO />
-            <Content>
-                <ContentHeader />
-                <ContentBody container={false} p={["0px", "0px"]}>
-                    <Wrapper layout={2}>
-                        <Sidebar />
-                        <Main layout={2} />
-                    </Wrapper>
-                </ContentBody>
-            </Content>
-        </>
-    );
+  return (
+    <>
+      <SEO />
+      <Content>
+        <ContentHeader />
+        <ContentBody container={false} p={["0px", "0px"]}>
+          <Wrapper layout={2}>
+            <Sidebar />
+            <Main layout={2} />
+          </Wrapper>
+        </ContentBody>
+      </Content>
+    </>
+  );
 };
 
 export default Contacts;

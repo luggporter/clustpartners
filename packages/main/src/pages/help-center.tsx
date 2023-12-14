@@ -6,19 +6,19 @@ import RowTwo from "../containers/help-center/row-two";
 import SEO from "../components/seo";
 
 const HelpCenter = () => {
-    return (
-        <>
-            <SEO />
-            <Content borderBottomWidth="1px">
-                <PageHeader />
-            </Content>
-            <Content mt={[null, null, null, "0px"]}>
-                <RowOne />
-                <HRLine mt="60px" mb="30px" />
-                <RowTwo />
-            </Content>
-        </>
-    );
+  return (
+    <>
+      <SEO />
+      <Content borderBottomWidth="1px">
+        <PageHeader />
+      </Content>
+      <Content mt={[null, null, null, "0px"]}>
+        <RowOne />
+        <HRLine mt="60px" mb="30px" />
+        <RowTwo />
+      </Content>
+    </>
+  );
 };
 
 export default HelpCenter;

@@ -4,25 +4,25 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { TTheme } from "@doar/shared/types";
 
 export interface UIState {
-    theme: TTheme;
+  theme: TTheme;
 }
 
 const initialState: UIState = {
-    theme: "classic",
+  theme: "classic",
 };
 
 const themeSlice = createSlice({
-    name: "theme",
-    initialState,
-    reducers: {
-        toggleTheme(state, action: PayloadAction<{ theme: TTheme }>) {
-            const {
-                payload: { theme },
-            } = action;
+  name: "theme",
+  initialState,
+  reducers: {
+    toggleTheme(state, action: PayloadAction<{ theme: TTheme }>) {
+      const {
+        payload: { theme },
+      } = action;
 
-            state.theme = theme;
-        },
+      state.theme = theme;
     },
+  },
 });
 
 export const { toggleTheme } = themeSlice.actions;

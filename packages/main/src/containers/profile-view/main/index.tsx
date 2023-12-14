@@ -5,15 +5,15 @@ import Education from "../../../components/profile-view/education";
 import Interests from "../../../components/profile-view/interests";
 
 const Main = () => {
-    return (
-        <>
-            <UpdateOption />
-            <LatestActivity />
-            <WorkExperience />
-            <Education />
-            <Interests />
-        </>
-    );
+  return (
+    <>
+      <UpdateOption />
+      <LatestActivity />
+      <WorkExperience />
+      <Education />
+      <Interests />
+    </>
+  );
 };
 
 export default Main;

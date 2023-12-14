@@ -3,16 +3,16 @@ import RecentActivities from "../../../components/dashboard-four/recent-activiti
 import AgentPoints from "../../../components/dashboard-four/agent-points";
 
 const LeftRowThree = () => {
-    return (
-        <>
-            <Col md={6} mt="10px">
-                <RecentActivities />
-            </Col>
-            <Col md={6} mt="10px">
-                <AgentPoints />
-            </Col>
-        </>
-    );
+  return (
+    <>
+      <Col md={6} mt="10px">
+        <RecentActivities />
+      </Col>
+      <Col md={6} mt="10px">
+        <AgentPoints />
+      </Col>
+    </>
+  );
 };
 
 export default LeftRowThree;

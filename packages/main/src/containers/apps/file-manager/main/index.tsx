@@ -8,36 +8,36 @@ import RowOne from "../row-one";
 import RowTwo from "../row-two";
 import RowThree from "../row-three";
 import {
-    StyledMain,
-    StyledHeader,
-    StyledBody,
-    StyledBodyInner,
-    StyledHeading,
+  StyledMain,
+  StyledHeader,
+  StyledBody,
+  StyledBodyInner,
+  StyledHeading,
 } from "./style";
 
 const Wrapper = () => {
-    const { sidebar } = useAppSelector((state) => state.ui);
-    return (
-        <StyledMain $showSidebar={sidebar}>
-            <StyledHeader>
-                <Search className="search" />
-                <SearchForm />
-                <Toolbar />
-            </StyledHeader>
-            <ScrollBar top="55px">
-                <StyledBody>
-                    <StyledBodyInner>
-                        <StyledHeading>All Files</StyledHeading>
-                        <RowOne />
-                        <HRLine my="40px" borderWidth="0px" />
-                        <RowTwo />
-                        <HRLine my="40px" borderWidth="0px" />
-                        <RowThree />
-                    </StyledBodyInner>
-                </StyledBody>
-            </ScrollBar>
-        </StyledMain>
-    );
+  const { sidebar } = useAppSelector((state) => state.ui);
+  return (
+    <StyledMain $showSidebar={sidebar}>
+      <StyledHeader>
+        <Search className="search" />
+        <SearchForm />
+        <Toolbar />
+      </StyledHeader>
+      <ScrollBar top="55px">
+        <StyledBody>
+          <StyledBodyInner>
+            <StyledHeading>All Files</StyledHeading>
+            <RowOne />
+            <HRLine my="40px" borderWidth="0px" />
+            <RowTwo />
+            <HRLine my="40px" borderWidth="0px" />
+            <RowThree />
+          </StyledBodyInner>
+        </StyledBody>
+      </ScrollBar>
+    </StyledMain>
+  );
 };
 
 export default Wrapper;

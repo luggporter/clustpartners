@@ -8,22 +8,22 @@ import { useAppSelector } from "../../../../redux/hooks";
 import { StyledSidebar, StyledHeader, StyledBody } from "./style";
 
 const Sidebar = () => {
-    const { sidebar } = useAppSelector((state) => state.ui);
-    return (
-        <StyledSidebar $show={sidebar}>
-            <StyledHeader>
-                <NewDropdown />
-                <UploadDropdown />
-            </StyledHeader>
-            <ScrollBar top="55px">
-                <StyledBody>
-                    <MyDrive />
-                    <FileLibrary />
-                    <StorageStatus />
-                </StyledBody>
-            </ScrollBar>
-        </StyledSidebar>
-    );
+  const { sidebar } = useAppSelector((state) => state.ui);
+  return (
+    <StyledSidebar $show={sidebar}>
+      <StyledHeader>
+        <NewDropdown />
+        <UploadDropdown />
+      </StyledHeader>
+      <ScrollBar top="55px">
+        <StyledBody>
+          <MyDrive />
+          <FileLibrary />
+          <StorageStatus />
+        </StyledBody>
+      </ScrollBar>
+    </StyledSidebar>
+  );
 };
 
 export default Sidebar;

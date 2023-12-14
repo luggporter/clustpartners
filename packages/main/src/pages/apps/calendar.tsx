@@ -4,15 +4,15 @@ import Main from "../../containers/apps/calendar/main";
 import SEO from "../../components/seo";
 
 const Calendar = () => {
-    return (
-        <>
-            <SEO />
-            <Wrapper>
-                <Sidebar />
-                <Main />
-            </Wrapper>
-        </>
-    );
+  return (
+    <>
+      <SEO />
+      <Wrapper>
+        <Sidebar />
+        <Main />
+      </Wrapper>
+    </>
+  );
 };
 
 export default Calendar;

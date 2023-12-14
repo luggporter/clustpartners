@@ -7,18 +7,18 @@ import RowThree from "../containers/dashboard-five/row-three";
 import RowFour from "../containers/dashboard-five/row-four";
 
 const DashboardFive = () => {
-    return (
-        <>
-            <SEO />
-            <Content>
-                <WelcomeArea />
-                <RowOne />
-                <RowTwo />
-                <RowThree />
-                <RowFour />
-            </Content>
-        </>
-    );
+  return (
+    <>
+      <SEO />
+      <Content>
+        <WelcomeArea />
+        <RowOne />
+        <RowTwo />
+        <RowThree />
+        <RowFour />
+      </Content>
+    </>
+  );
 };
 
 export default DashboardFive;

@@ -12,25 +12,25 @@ import RowFive from "../../containers/dashboard-three/row-five";
 import SEO from "../../components/seo";
 
 const DashboardThree = () => {
-    return (
-        <>
-            <SEO />
-            <CryptoFontCSS />
-            <Content>
-                <ContentHeader />
-                <ContentBody>
-                    <WelcomeArea />
-                    <Row gutters={10}>
-                        <RowOne />
-                        <RowTwo />
-                        <RowThree />
-                        <RowFour />
-                        <RowFive />
-                    </Row>
-                </ContentBody>
-            </Content>
-        </>
-    );
+  return (
+    <>
+      <SEO />
+      <CryptoFontCSS />
+      <Content>
+        <ContentHeader />
+        <ContentBody>
+          <WelcomeArea />
+          <Row gutters={10}>
+            <RowOne />
+            <RowTwo />
+            <RowThree />
+            <RowFour />
+            <RowFive />
+          </Row>
+        </ContentBody>
+      </Content>
+    </>
+  );
 };
 
 export default DashboardThree;

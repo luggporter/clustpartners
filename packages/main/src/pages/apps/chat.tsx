@@ -5,16 +5,16 @@ import Main from "../../containers/apps/chat/main";
 import SEO from "../../components/seo";
 
 const Chat = () => {
-    return (
-        <>
-            <SEO />
-            <Wrapper>
-                <NavLeft />
-                <Sidebar />
-                <Main />
-            </Wrapper>
-        </>
-    );
+  return (
+    <>
+      <SEO />
+      <Wrapper>
+        <NavLeft />
+        <Sidebar />
+        <Main />
+      </Wrapper>
+    </>
+  );
 };
 
 export default Chat;

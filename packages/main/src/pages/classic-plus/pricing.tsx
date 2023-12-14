@@ -5,17 +5,17 @@ import PricingContainer from "../../containers/pricing";
 import SEO from "../../components/seo";
 
 const Pricing = () => {
-    return (
-        <>
-            <SEO />
-            <Content fullHeight align="center">
-                <ContentHeader />
-                <ContentBody>
-                    <PricingContainer />
-                </ContentBody>
-            </Content>
-        </>
-    );
+  return (
+    <>
+      <SEO />
+      <Content fullHeight align="center">
+        <ContentHeader />
+        <ContentBody>
+          <PricingContainer />
+        </ContentBody>
+      </Content>
+    </>
+  );
 };
 
 export default Pricing;

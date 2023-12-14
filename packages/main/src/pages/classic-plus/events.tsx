@@ -8,29 +8,29 @@ import Sidebar from "../../containers/events/sidebar";
 import SEO from "../../components/seo";
 
 const Events = () => {
-    return (
-        <>
-            <SEO />
-            <Content>
-                <ContentHeader />
-                <ContentBody>
-                    <PageHeader
-                        prev={[
-                            { text: "Profile", link: "/profile-view" },
-                            { text: "Discover", link: "/" },
-                        ]}
-                        title="Events"
-                        wcText="Discover Events"
-                        pb="40px"
-                    />
-                    <Row>
-                        <MainContent />
-                        <Sidebar />
-                    </Row>
-                </ContentBody>
-            </Content>
-        </>
-    );
+  return (
+    <>
+      <SEO />
+      <Content>
+        <ContentHeader />
+        <ContentBody>
+          <PageHeader
+            prev={[
+              { text: "Profile", link: "/profile-view" },
+              { text: "Discover", link: "/" },
+            ]}
+            title="Events"
+            wcText="Discover Events"
+            pb="40px"
+          />
+          <Row>
+            <MainContent />
+            <Sidebar />
+          </Row>
+        </ContentBody>
+      </Content>
+    </>
+  );
 };
 
 export default Events;

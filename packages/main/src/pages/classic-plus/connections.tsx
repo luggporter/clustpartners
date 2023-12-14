@@ -8,26 +8,26 @@ import Sidebar from "../../containers/connections/sidebar";
 import SEO from "../../components/seo";
 
 const Connections = () => {
-    return (
-        <>
-            <SEO />
-            <Content>
-                <ContentHeader />
-                <ContentBody>
-                    <PageHeader
-                        prev={[{ text: "Your Profile", link: "/profile-view" }]}
-                        title="Connections"
-                        wcText="Connections"
-                        pb="40px"
-                    />
-                    <Row>
-                        <MainContent />
-                        <Sidebar />
-                    </Row>
-                </ContentBody>
-            </Content>
-        </>
-    );
+  return (
+    <>
+      <SEO />
+      <Content>
+        <ContentHeader />
+        <ContentBody>
+          <PageHeader
+            prev={[{ text: "Your Profile", link: "/profile-view" }]}
+            title="Connections"
+            wcText="Connections"
+            pb="40px"
+          />
+          <Row>
+            <MainContent />
+            <Sidebar />
+          </Row>
+        </ContentBody>
+      </Content>
+    </>
+  );
 };
 
 export default Connections;
